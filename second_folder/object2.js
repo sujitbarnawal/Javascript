@@ -7,14 +7,14 @@
 
 // console.log(user);
 
-let user = {
-    name: "sujit",
-    address: "Ktm",
-    college: {
-        cname: "Ascol",
-        no_of_students: 1000
-    }
-}
+// let user = {
+//     name: "sujit",
+//     address: "Ktm",
+//     college: {
+//         cname: "Ascol",
+//         no_of_students: 1000
+//     }
+// }
 // // console.log(user);
 // console.log(user.college);
 // console.log(user.college.no_of_students);
@@ -46,3 +46,14 @@ let user = {
 
 // console.log(user.hasOwnProperty("address"));
 // console.log(user.hasOwnProperty("course"));
+
+// Destructuring of Objects
+
+let objecctA={
+    sName:"sujit",
+    sNddress:"Ktm",
+    sRoll:24
+}
+
+let {sName,sRoll}=objecctA
+console.log(sName,sRoll)
