@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Object Model</title>
+</head>
+<body>
+
+
+    <script>
+        let div=document.createElement("div")
+        // console.log(div);
+        div.className="main"
+        div.id= "unique"
+        div.setAttribute("title","Learn")
+        div.style.backgroundColor="red"
+        div.style.padding="12px"
+        // div.innerText="Learning Javascript"
+        let addText=document.createTextNode("Learning")
+        div.appendChild(addText)
+        document.body.appendChild(div)
+
+
+    </script>
+</body>
+</html>
