@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyboard Check </title>
+</head>
+
+<style>
+    body {
+        background: grey;
+        font-size: 30px;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+    }
+</style>
+
+<body>
+    <div class="project">
+        <div id="insert">
+            <div class="key">Press the Key</div>
+        </div>
+    </div>
+
+    <script>
+
+        let insert = document.querySelector("#insert")
+        window.addEventListener("keydown", (e) => {
+            insert.innerHTML = `
+                <div class="color">
+                    <table border="1">
+                        <tr>
+                            <th>Key</th>
+                            <th>Key Code</th>
+                            <th>Code</th>
+                        </tr>
+                        <tr>
+                            <th>${e.key === " " ? "space" : e.key}</th>
+                            <th>${e.keyCode}</th>
+                            <th>${e.code}</th>
+                        </tr>
+                    </table>
+                </div>    
+            `
+        })
+
+    </script>
+</body>
+
+</html>
