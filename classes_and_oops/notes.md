@@ -16,7 +16,7 @@ Object literals
 -Instances(new,this)
 
 
-Study yourself
+Study yourself # 4 pillars
 
 -Abstraction
 -Encapsulation
