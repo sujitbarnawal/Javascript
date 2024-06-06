@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async</title>
+</head>
+<body>
+    <h1>Async2</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+
+    <script>
+
+        let si=function(){
+            console.log("sujit");
+        }
+
+        // setInterval(() => {
+        //     console.log("async");
+        // }, 1000);
+
+        // let setIn=setInterval(si,1000);
+        // clearInterval(setIn)
+        let start=document.querySelector("#start")
+        let stop=document.querySelector("#stop")
+
+        start.addEventListener("click",()=>{
+            setIn=setInterval(si,1000)
+        });
+
+        stop.addEventListener("click",()=>{
+            clearInterval(setIn)
+        })
+
+        
+
+    </script>
+
+</body>
+</html>
