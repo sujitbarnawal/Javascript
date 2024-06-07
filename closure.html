@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lexical scoping and Closure</title>
+</head>
+
+<body>
+    <button id="Orange">Orange</button>
+    <button id="Green">Green</button>
+
+    <script>
+
+        // Lexical scoping
+        function init() {
+            let name = "Mozilla";
+            function displayName() {
+                // console.log(name);
+            }
+            displayName();
+        }
+        init();
+
+
+        function outer() {
+            let username = "sujit"
+            // console.log("outer", password);
+            function inner1() {
+                let password = "abcdefgh"
+                // console.log("inner1", username);
+            }
+            function inner2() {
+                // console.log("inner2", username);
+                // console.log(password);
+            }
+            inner1()
+            inner2()
+
+        }
+        outer()
+        // console.log("exterme outer",username);
+
+        //Closure
+        function makeFunc() {
+            const name = "Mozilla";
+            function displayName() {
+                // console.log(name);
+            }
+            return displayName;
+        }
+
+        const myFunc = makeFunc();
+        myFunc();
+
+
+
+
+
+    </script>
+
+    <script>
+
+        // let orange=document.getElementById("Orange")
+        // orange.addEventListener("click",()=>{
+        //     document.body.style.backgroundColor="Orange"
+        // })
+
+        // let green=document.getElementById("Green")
+        // green.addEventListener("click",()=>{
+        //     document.body.style.backgroundColor="Green"
+        // })
+
+        // closure practical implementation start
+
+        function clickHandler(color){
+            // document.body.style.backgroundColor = `${color}`
+
+            return function(){
+                document.body.style.backgroundColor = `${color}`
+            }
+        }
+
+        document.getElementById('Orange').addEventListener("click",clickHandler("Orange"))  
+        document.getElementById('Green').addEventListener("click",clickHandler("Green"))  
+
+        // closure practical implementation end
+
+
+        // function colorhandler(color) {
+        //     let element = document.getElementById(color);
+        //     element.addEventListener("click", () => {
+        //         document.body.style.backgroundColor = color;
+        //     });
+        // }
+
+        // colorhandler("Orange");
+        // colorhandler("Green");
+
+    </script>
+</body>
+
+</html>
